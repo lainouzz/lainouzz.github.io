@@ -1,5 +1,33 @@
 const projects = [
   {
+    id: 4,
+    title: "Harvest Hollow",
+    category: "unity",
+    tags: ["Unity", "C#", "Farming Sim", "Economy", "Save System"],
+    thumbnail: "public/assets/images/HH-Thumbnail.webp",
+    description: "A cozy first-person farming game. Till, plant, water and harvest 13 crops, trade with a travelling merchant, and grow your farm plot by plot.",
+    year: "2026",
+    platform: "PC (Windows)",
+    role: "Solo Developer",
+    longDesc: "Harvest Hollow is a cozy, low-poly farming game played in first person and released on itch.io. You till the soil, plant seeds, water them before bed and wake up to a fresh harvest. Crops are sold to a travelling merchant who brings rarer seeds, and the farm grows one purchasable plot at a time. Whatever you harvest can also be replanted as seed. I made the game solo: design, gameplay code, art direction and the scene.",
+    problem: "Build a complete, relaxing farming loop of planting, growing, selling and expanding, where small decisions like when to water or what to replant still matter.",
+    approach: "Built a grid-based plot system with tool-driven interactions (hoe, watering can, seed bag, sickle), soil moisture that dries out over days and affects growth speed and yield, a buy/sell merchant economy, purchasable plots, and a sleep-to-advance day cycle with autosave.",
+    result: "A released, playable game with 13 crops, a working economy and saved progression, available on itch.io for Windows and still being developed.",
+    videoUrl: "https://youtu.be/qHnfmDaxQgU",
+    repoUrl: null,
+    itchUrl: "https://lainouzz.itch.io/harvest-hollow",
+    screenshots: [
+      "public/assets/images/HH1.webp",
+      "public/assets/images/HH2.webp",
+      "public/assets/images/HH3.webp",
+      "public/assets/images/HH4.png",
+      "public/assets/images/HH5.webp",
+      "public/assets/images/HH6.webp",
+      "public/assets/images/HH7.webp",
+      "public/assets/images/HH8.webp"
+    ]
+  },
+  {
     id: 0,
     title: "Sandbox Playground",
     category: "sfml",
