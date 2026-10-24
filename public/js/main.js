@@ -14,7 +14,7 @@ const projects = [
     approach: "Built a grid-based plot system with tool-driven interactions (hoe, watering can, seed bag, sickle), soil moisture that dries out over days and affects growth speed and yield, a buy/sell merchant economy, purchasable plots, and a sleep-to-advance day cycle with autosave.",
     result: "A released, playable game with 13 crops, a working economy and saved progression, available on itch.io for Windows and still being developed.",
     videoUrl: "https://youtu.be/qHnfmDaxQgU",
-    repoUrl: null,
+    repoUrl: "https://github.com/lainouzz/harvest-hollow",
     itchUrl: "https://lainouzz.itch.io/harvest-hollow",
     screenshots: [
       "public/assets/images/HH1.webp",
