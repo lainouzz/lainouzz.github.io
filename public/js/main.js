@@ -1,5 +1,29 @@
 const projects = [
   {
+    id: 5,
+    title: "TheSub",
+    category: "unreal",
+    tags: ["Unreal Engine 5", "C++", "Multiplayer", "Co-op", "Replication"],
+    thumbnail: "public/assets/images/SubInterior.png",
+    description: "A first-person online co-op submarine game in UE5 C++. Two players crew one sub, manning the helm, sonar and engine to dive a dark trench together.",
+    year: "2026",
+    platform: "PC (Windows)",
+    role: "Solo Developer (in development)",
+    longDesc: "TheSub is a two-player online co-op game built in Unreal Engine 5 with C++, where both players crew the same submarine from the inside. The helm pilot steers using a noisy external camera feed, while the sonar operator pings the trench to read depth, ground clearance and nearby walls, and calls out what the pilot can't see. The goal is to reach a beacon at the bottom of the trench. I'm building it to deepen my multiplayer and replication skills in a game where communication between players is the core mechanic.",
+    problem: "Make a co-op game where neither player can succeed alone: each station gives only part of the picture, so the crew has to talk to navigate.",
+    approach: "Built a listen-server co-op setup in UE5 C++ with station interactions that a player enters and leaves, a sonar with ping and recharge that maps the trench, depth and ground readouts, and a helm with a degraded camera view, all synced between host and client.",
+    result: "A playable two-player prototype with working helm, sonar and engine stations and a dive objective, used to playtest whether the co-op loop is fun before scaling up.",
+    videoUrl: "#",
+    gif: "public/assets/images/SubGameplay.gif",
+    repoUrl: "https://github.com/lainouzz/TheSub",
+    screenshots: [
+      "public/assets/images/SubOuter.png",
+      "public/assets/images/SubInteriror2.png",
+      "public/assets/images/SubHelm.png",
+      "public/assets/images/SubSonar.png"
+    ]
+  },
+  {
     id: 4,
     title: "Harvest Hollow",
     category: "unity",
@@ -274,6 +298,17 @@ function openModal(id) {
     `
     : '';
 
+  const gifHtml = project.gif
+    ? `
+      <div class="mb-8">
+        <h4 class="font-serif text-lg font-semibold text-stone-900 mb-3">Gameplay</h4>
+        <div class="rounded-lg overflow-hidden bg-black flex items-center justify-center">
+          <img src="${project.gif}" alt="${project.title} gameplay" class="w-full h-auto max-h-[70vh] object-contain" loading="lazy" decoding="async">
+        </div>
+      </div>
+    `
+    : '';
+
   let screenshotsHtml = '';
   if (project.screenshots && project.screenshots.length > 0) {
     screenshotsHtml = `
@@ -292,6 +327,7 @@ function openModal(id) {
 
   document.getElementById('modal-body').innerHTML = `
     ${videoHtml}
+    ${gifHtml}
     <div class="flex flex-wrap items-center gap-3 mb-6">
       <span class="bg-stone-200 text-stone-700 px-3 py-1 rounded-full text-xs font-medium">${project.platform}</span>
       <span class="bg-stone-200 text-stone-700 px-3 py-1 rounded-full text-xs font-medium">${project.year}</span>
